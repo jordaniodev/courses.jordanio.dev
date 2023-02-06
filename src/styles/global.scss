@@ -1,0 +1,29 @@
+:root {
+  --background: #180000;
+  --background2: #590209;
+  --background-button: #A60321;
+  --background-button2: #D9043D;
+  --white: #00A60D;
+  --gray: #BEC2C6;
+  --white: #FBFBFB;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px 'Montserrat','Arial',sans-serif;
+  color: #FBFBFB;
+  background: var(--background);
+}
+
+input, textarea {
+  font-family:'Montserrat','Arial',sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
