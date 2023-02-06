@@ -33,7 +33,12 @@ export function SideBar({ genres, selectedGenreId, selectGenre,isOpen = true,clo
           key={String(genre.id)}
           title={genre.title}
           iconName={genre.name}
-          onClick={() => selectGenre(genre.id)}
+          onClick={() => {
+            if(window.innerWidth <= 900){
+              closeSidedBar()
+            }
+            selectGenre(genre.id)
+          }}
           selected={selectedGenreId === genre.id}
         />
       ))}
