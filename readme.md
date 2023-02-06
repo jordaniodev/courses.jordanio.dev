@@ -2,11 +2,6 @@
    <img  src="https://i.ibb.co/SPGby68/jordanio.png"  />
 </p>
 <h1>React Movie List</h1>
-<p  align="center">
-    <a href="https://www.figma.com/file/QmuBAwGLyIH6JXIm2Ls0v5/Untitled?node-id=2%3A42&t=xxXDTS96Kn7sxe3L-1">
-        <img  src="https://i.ibb.co/RvFK26K/preview.png"  />
-    </a>
-</p>
 <p>Este projeto é uma aplicação web construída com React que permite listar filmes por categoria. Com ele, é possível explorar uma ampla variedade de gêneros de filmes e descobrir novos títulos interessantes.</p>
 <p>Ela tem como objetivo a utilizaçãs das funcionalidades básicas de uma aplicação que utiliza react, são elas:</p>
 <ul>
