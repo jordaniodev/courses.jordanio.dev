@@ -1,15 +1,20 @@
 import { GenreResponseProps } from "../interfaces/GenreResponseProps";
 import { Movie } from "../interfaces/Movie";
+import { Icon } from "./Icon";
 import { Loading } from "./Loading";
 import { MovieCard } from "./MovieCard";
 
 interface ContentProps {
   selectedGenre: GenreResponseProps;
-  movies: Movie[]
+  movies: Movie[];
+  openMenu: (isOpen:boolean) => void;
 }
-export function Content({ selectedGenre, movies }: ContentProps) {
+export function Content({ selectedGenre, movies, openMenu }: ContentProps) {
   return (<div className="container">
     <header>
+      <Icon name="menu" color="#ffffff" onClick={() => {
+        openMenu(true)
+        }} />
       <span className="category">Categoria:<span> {selectedGenre.title}</span></span>
     </header>
 

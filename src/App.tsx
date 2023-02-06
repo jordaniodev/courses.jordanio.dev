@@ -18,11 +18,13 @@ export function App() {
   const [selectedGenreId, setSelectedGenreId] = useState(1);
 
   const [genres, setGenres] = useState<GenreResponseProps[]>([]);
+  const [isOpenNavbar, setIsOpenNavbar] = useState<boolean>(true);
 
   const [movies, setMovies] = useState<Movie[]>([]);
   const [selectedGenre, setSelectedGenre] = useState<GenreResponseProps>({} as GenreResponseProps);
 
   useEffect(() => {
+    setIsOpenNavbar(window.innerWidth >= 900)
     api.get<GenreResponseProps[]>('genres').then(response => {
       setGenres(response.data);
     });
@@ -41,11 +43,13 @@ export function App() {
   function selectGenre(id: number) {
     setSelectedGenreId(id);
   }
-
+  console.log(isOpenNavbar)
   return (
-    <div style={{ display: 'flex', flexDirection: 'row' }}>
-      <SideBar genres={genres} selectedGenreId={selectedGenreId} selectGenre={selectGenre} />
-      <Content movies={movies} selectedGenre={selectedGenre} />
+    <div className="mainContent">
+      <SideBar genres={genres} selectedGenreId={selectedGenreId} selectGenre={selectGenre} isOpen={isOpenNavbar} closeSidedBar={() => setIsOpenNavbar(false)} openSideBar={() => setIsOpenNavbar(true)} />
+      <Content movies={movies} selectedGenre={selectedGenre} openMenu={() => {
+        setIsOpenNavbar(true)
+        }}/>
     </div>
   )
 }

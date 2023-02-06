@@ -1,16 +1,11 @@
 nav.sidebar {
   display: flex;
   flex-direction: column;
-
   align-items: center;
-
   max-width: 24rem;
   width: 100%;
-
   padding: 2rem;
-
   background: var(--background2);
-
   > span {
     margin-bottom: 4.5rem;
     font-size: 3rem;
@@ -23,10 +18,35 @@ nav.sidebar {
     }
   }
 
+  .closeButton{
+    position: absolute;
+    font-size: 1.5rem;
+    right: 2rem;
+    cursor: pointer;
+    display: none;
+  }
+
   .buttons-container {
     display: flex;
     flex-direction: column;
 
     width: 100%;
   }
+
+  @media (max-width: 900PX)
+  {
+    position: absolute;
+    max-width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    
+    button{
+      max-width: 100vw;
+    }
+
+    .closeButton{
+      display: inherit;
+    }
+  }
 }
+

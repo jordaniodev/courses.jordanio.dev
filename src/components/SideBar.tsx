@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { GenreResponseProps } from "../interfaces/GenreResponseProps";
 import { Button } from "./Button";
 import { Logo } from "./Logo";
@@ -5,10 +6,25 @@ import { Logo } from "./Logo";
 interface SideBarProps {
   genres: GenreResponseProps[];
   selectedGenreId: number;
+  isOpen?: boolean;
+  closeSidedBar: () => void;
+  openSideBar: () => void;
   selectGenre: (genreId: number) => void
 }
-export function SideBar({ genres, selectedGenreId, selectGenre }: SideBarProps) {
-  return (<nav className="sidebar">
+export function SideBar({ genres, selectedGenreId, selectGenre,isOpen = true,closeSidedBar,openSideBar }: SideBarProps) {
+  useEffect(()=>{
+    window.onresize = () => {
+      if(window.innerWidth <= 900){
+        closeSidedBar()
+      }else{
+        openSideBar()
+      }
+    };
+  })  
+  return (isOpen && (<nav className="sidebar">
+    <span className="closeButton" onClick={() => closeSidedBar()}>
+      X
+    </span>
     <Logo />
 
     <div className="buttons-container">
@@ -23,5 +39,5 @@ export function SideBar({ genres, selectedGenreId, selectGenre }: SideBarProps) 
       ))}
     </div>
 
-  </nav>)
+  </nav>))
 }
