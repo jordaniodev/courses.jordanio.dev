@@ -42,12 +42,8 @@
    <li>Clone este repositório</li>
    <li>Acesse a pasta do projeto com o terminal</li>
    <li>Instale as dependências executando o comando <code>npm install</code></li>
-   <li>Inicie o aplicativo com o comando <code>npm start</code></li>
-</ol>
-<h2>Uso</h2>
-<ol>
-   <li>Entre com seu nome de usuário do Github na barra de pesquisa</li>
-   <li>Uma lista de seus repositórios será exibida, incluindo o nome, a descrição e o link para o repositório.</li>
+   <li>Inicie o aplicativo front end com o comando <code>npm run dev</code></li>
+   <li>Inicie o servidor backend com o comando <code>npm run server:netlify-functions</code></li>
 </ol>
 <h2>Demo</h2>
-<p>Para acessar a pagina demo basta acessar o link <a href="https://reposjordanio.netlify.app/">https://reposjordanio.netlify.app/</a></p>
+<p>Para acessar a pagina demo basta acessar o link <a href="https://coursesjordanio.netlify.app/">https://coursesjordanio.netlify.app/</a></p>

@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export const api = axios.create({
-  baseURL: 'http://localhost:9999/.netlify/functions/',
+  baseURL: 'https://coursesjordanio.netlify.app/.netlify/functions/',
 });
