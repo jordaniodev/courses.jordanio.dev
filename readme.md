@@ -22,6 +22,8 @@
    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
    <li><a href="https://babeljs.io/">Babel</a></li>
    <li><a href="https://pt-br.reactjs.org/">React JS</a></li>
+   <li><a href="https://www.netlify.com/">Netlify</a></li>
+   <li><a href="https://www.netlify.com/products/functions/">Netlify Functions</a></li>
 </ul>
 <h2>Recursos</h2>
 <ul>
